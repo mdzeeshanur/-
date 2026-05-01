@@ -130,7 +130,6 @@
                 0 0 60px rgba(255,20,147,0.8);
         }
 
-        /* Floating Hearts */
         .hearts {
             position: fixed;
             inset: 0;
@@ -180,13 +179,11 @@
         <span>💞</span>
     </div>
 
-    <!-- Start Screen -->
     <div id="startScreen" class="content">
         <h1>💌 A Special Surprise 💌</h1>
         <button onclick="openLetter()">Open Your Letter</button>
     </div>
 
-    <!-- Page 1 -->
     <div id="letter" class="section content">
         <h1>🎂 শুভ জন্মদিন 🎂</h1>
         <p class="name">আমার মহারাণী 💖</p>
@@ -206,7 +203,6 @@
         <button onclick="nextPage()">Next ❤️</button>
     </div>
 
-    <!-- Page 2 -->
     <div id="finalPage" class="section content">
         <h1>🎉 Happy Birthday 🎉</h1>
         <p class="name">আমার প্রিয়তমা 💖</p>
@@ -225,13 +221,11 @@
         <button onclick="finalPage()">One Last Thing ❤️</button>
     </div>
 
-    <!-- Final Page -->
     <div id="ending" class="section content">
-        <h1 class="glow">I LOVE YOU ❤️</h1>
+        <h1 class="glow">I LOVE YOU MY BOWJAAN ❤️</h1>
         <p>Forever & Always — তোমার আকাশ 💕</p>
     </div>
 
-    <!-- Background Music -->
     <audio id="music" loop>
         <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
     </audio>
@@ -242,9 +236,7 @@
             document.getElementById('letter').style.display = 'block';
 
             const music = document.getElementById('music');
-            music.play().catch(() => {
-                console.log('Autoplay blocked by browser.');
-            });
+            music.play().catch(() => {});
         }
 
         function nextPage() {
@@ -254,10 +246,12 @@
 
         function finalPage() {
             document.getElementById('finalPage').style.display = 'none';
-            document.getElementById('ending').style.display = 'flex';
-            document.getElementById('ending').style.flexDirection = 'column';
-            document.getElementById('ending').style.justifyContent = 'center';
-            document.getElementById('ending').style.alignItems = 'center';
+
+            const ending = document.getElementById('ending');
+            ending.style.display = 'flex';
+            ending.style.flexDirection = 'column';
+            ending.style.justifyContent = 'center';
+            ending.style.alignItems = 'center';
         }
     </script>
 
