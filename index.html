@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>For My Love ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Sections */
+.section {
+  display: none;
+  padding: 40px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+#startScreen {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Button */
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  background: white;
+  color: #ff4b6e;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.name {
+  font-size: 2em;
+  font-weight: bold;
+  color: #ffe4ec;
+}
+
+/* Story animation */
+.story p {
+  opacity: 0;
+  animation: fadeText 2s forwards;
+}
+
+.story p:nth-child(1) { animation-delay: 1s; }
+.story p:nth-child(2) { animation-delay: 3s; }
+.story p:nth-child(3) { animation-delay: 5s; }
+.story p:nth-child(4) { animation-delay: 7s; }
+
+@keyframes fadeText {
+  to { opacity: 1; }
+}
+
+/* Heart */
+.heart {
+  font-size: 50px;
+  animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Floating hearts */
+.hearts span {
+  position: absolute;
+  bottom: -50px;
+  font-size: 20px;
+  animation: float 10s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-1000px); opacity: 0; }
+}
+
+/* Message box */
+.message {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.4em;
+  line-height: 1.8;
+}
+
+/* Cinematic ending */
+#ending h1 {
+  font-size: 4em;
+  opacity: 0;
+  animation: zoomFade 4s forwards;
+}
+
+#ending p {
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+  animation-delay: 3s;
+}
+
+@keyframes zoomFade {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1.2); opacity: 1; }
+}
+
+.glow {
+  text-shadow: 0 0 20px rgba(255,255,255,0.8),
+               0 0 40px rgba(255,105,180,0.8),
+               0 0 60px rgba(255,20,147,0.8);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Start -->
+<div id="startScreen">
+  <h1>💌 A Special Surprise 💌</h1>
+  <button onclick="openLetter()">Open Your Letter</button>
+</div>
+
+<!-- Page 1 -->
+<div id="letter" class="section">
+
+  <h1>🎂 শুভ জন্মদিন 🎂</h1>
+  <p class="name">আমার মহারাণী 💖</p>
+
+  <div class="story">
+    <p>যেদিন তোমার সাথে আমার প্রথম পরিচয়, সেদিন থেকেই সবকিছু বদলে গেছে...</p>
+    <p>তোমার হাসি আমার পৃথিবীকে আলোকিত করে প্রতিদিন...</p>
+    <p>তোমার সাথে কাটানো প্রতিটি মুহূর্ত আমার জীবনের সবচেয়ে সুন্দর গল্প...</p>
+    <p>আর আজ, আমি শুধু বলতে চাই — তুমি আমার সবকিছু ❤️</p>
+  </div>
+
+  <div class="heart">❤️</div>
+
+  <p>অনেক ভালোবাসা আর সুখে ভরে উঠুক তোমার প্রতিটি দিন।</p>
+  <p>– তোমার আকাশ 💕</p>
+
+  <button onclick="nextPage()">Next ❤️</button>
+
+</div>
+
+<!-- Page 2 -->
+<div id="finalPage" class="section">
+
+  <h1>🎉 Happy Birthday 🎉</h1>
+  <p class="name">আমার প্রিয়তমা 💖</p>
+
+  <div class="message">
+    <p>
+    আমার জীবনের প্রতিটি দিনকে বসন্তের মতো সুন্দর করে তোলার জন্য ধন্যবাদ।
+    তোমার এই বিশেষ দিনে আমি শুধু এটাই বলতে চাই—আমি তোমাকে আজীবন এভাবেই আগলে রাখতে চাই।
+    হাজারো তারার ভিড়ে যেমন চাঁদ অনন্য, তেমনি আমার ভিড়ভাট্টার জীবনে তুমিই আমার একমাত্র প্রশান্তি।
+    তোমার এই জন্মদিনে আমার একটাই প্রার্থনা—আমাদের ভালোবাসার এই বন্ধন যেন সময়ের সাথে আরও গভীর হয়।
+    </p>
+    <p><strong>শুভ জন্মদিন, আমার প্রিয়তমা! ❤️</strong></p>
+  </div>
+
+  <button onclick="finalPage()">One Last Thing ❤️</button>
+
+</div>
+
+<!-- Page 3 Cinematic Ending -->
+<div id="ending" class="section">
+
+  <h1 class="glow">I LOVE YOU ❤️</h1>
+  <p>Forever & Always — তোমার আকাশ 💕</p>
+
+</div>
+
+<!-- Music -->
+<audio id="music" loop>
+  <source src="https://www2.cs.uic.edu/~i101/SoundFiles/HappyBirthday.mid" type="audio/midi">
+</audio>
+
+<!-- Hearts -->
+<div class="hearts">
+  <span style="left:10%">💖</span>
+  <span style="left:30%">❤️</span>
+  <span style="left:50%">💗</span>
+  <span style="left:70%">💕</span>
+  <span style="left:90%">💞</span>
+</div>
+
+<script>
+function openLetter() {
+  document.getElementById("startScreen").style.display = "none";
+  document.getElementById("letter").style.display = "block";
+  document.getElementById("music").play();
+}
+
+function nextPage() {
+  document.getElementById("letter").style.display = "none";
+  document.getElementById("finalPage").style.display = "block";
+}
+
+function finalPage() {
+  document.getElementById("finalPage").style.display = "none";
+  document.getElementById("ending").style.display = "block";
+}
+</script>
+
+</body>
+</html>
